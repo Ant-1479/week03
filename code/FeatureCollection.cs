@@ -1,3 +1,5 @@
+/// <summary>
+/// Represents a collection of features, typically used for geographic data.
 public class FeatureCollection
 {
     public List<Feature> Features { get; set; }

@@ -3,7 +3,7 @@ using System.Text.Json;
 
 public static class SetsAndMaps
 {
-    // Problem 1: O(n) symmetric pairs using a set.
+    // Problem 2: O(n) symmetric pairs using a set.
     public static string[] FindPairs(string[] words)
     {
         var seen = new HashSet<string>();

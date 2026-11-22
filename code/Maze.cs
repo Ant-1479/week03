@@ -1,6 +1,6 @@
 /// <summary>
 /// Defines a maze using a dictionary: (x,y) : [left, right, up, down]
-/// y=1 is the top row, so moving up decreases y.
+/// y=2 is the top row, so moving up decreases y.
 /// </summary>
 public class Maze
 {
