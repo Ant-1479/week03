@@ -3,10 +3,7 @@ using System.Text.Json;
 
 public static class SetsAndMaps
 {
-    /// <summary>
-    /// Finds all symmetric pairs of two character words in O(n) time using a set.
-    /// Example: [am, at, ma, if, fi] -> ["am & ma", "if & fi"]
-    /// </summary>
+    // Problem 1: O(n) symmetric pairs using a set.
     public static string[] FindPairs(string[] words)
     {
         var seen = new HashSet<string>();
@@ -15,38 +12,31 @@ public static class SetsAndMaps
         foreach (var word in words)
         {
             var reversed = string.Concat(word[1], word[0]);
-
-            // Same-letter words (e.g. "aa") never pair with anything.
-            // If the reverse was seen earlier, report earlier word first.
             if (word != reversed && seen.Contains(reversed))
                 results.Add($"{reversed} & {word}");
-
             seen.Add(word);
         }
 
         return results.ToArray();
     }
 
-    /// <summary>
-    /// Read a census file and summarize the degrees (4th column).
-    /// </summary>
+    // Problem 2: count degrees (column 4 of the file).
     public static Dictionary<string, int> SummarizeDegrees(string filename)
     {
         var degrees = new Dictionary<string, int>();
         foreach (var line in File.ReadLines(filename))
         {
             var fields = line.Split(",");
-            var degree = fields[3].Trim();
+            if (fields.Length < 4) continue; // skip blank/short lines
 
+            var degree = fields[3].Trim();
             degrees[degree] = degrees.GetValueOrDefault(degree) + 1;
         }
 
         return degrees;
     }
 
-    /// <summary>
-    /// Determine if 'word1' and 'word2' are anagrams, ignoring spaces and case.
-    /// </summary>
+    // Problem 3: anagram check using a dictionary, ignoring spaces and case.
     public static bool IsAnagram(string word1, string word2)
     {
         var counts = new Dictionary<char, int>();
@@ -67,18 +57,10 @@ public static class SetsAndMaps
             counts[c] = count - 1;
         }
 
-        foreach (var count in counts.Values)
-        {
-            if (count != 0)
-                return false;
-        }
-
-        return true;
+        return counts.Values.All(v => v == 0);
     }
 
-    /// <summary>
-    /// Reads today's earthquake data from USGS and returns "place - Mag X" strings.
-    /// </summary>
+    // Problem 5: today's earthquakes from USGS.
     public static string[] EarthquakeDailySummary()
     {
         const string uri = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson";
@@ -90,7 +72,6 @@ public static class SetsAndMaps
         var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
 
         var featureCollection = JsonSerializer.Deserialize<FeatureCollection>(json, options);
-
         if (featureCollection?.Features == null)
             return [];
 
@@ -98,7 +79,6 @@ public static class SetsAndMaps
         foreach (var feature in featureCollection.Features)
         {
             var props = feature.Properties;
-            // Some events have no magnitude; skip those so every line has one.
             if (props?.Place == null || props.Mag == null)
                 continue;
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\code.csproj": {}
+    "c:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\code.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\code.csproj": {
+    "c:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\code.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\code.csproj",
+        "projectUniqueName": "c:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\code.csproj",
         "projectName": "code",
-        "projectPath": "C:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\code.csproj",
+        "projectPath": "c:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\code.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\obj\\",
+        "outputPath": "c:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,12 +1,5 @@
 /// <summary>
-/// Defines a maze using a dictionary. The dictionary is provided by the
-/// user when the Maze object is created. The dictionary will contain the
-/// following mapping:
-///
-/// (x,y) : [left, right, up, down]
-///
-/// 'x' and 'y' are integers and represent locations in the maze.
-/// 'left', 'right', 'up', and 'down' are boolean and represent valid directions.
+/// Defines a maze using a dictionary: (x,y) : [left, right, up, down]
 /// y=1 is the top row, so moving up decreases y.
 /// </summary>
 public class Maze
@@ -20,40 +13,36 @@ public class Maze
         _mazeMap = mazeMap;
     }
 
-    /// <summary>Check to see if you can move left. If you can, update location; otherwise throw.</summary>
     public void MoveLeft()
     {
         if (!_mazeMap[(_currX, _currY)][0])
-            throw new InvalidOperationException("Can't go left!");
+            throw new InvalidOperationException("Can't go that way!");
         _currX--;
     }
 
-    /// <summary>Check to see if you can move right. If you can, update location; otherwise throw.</summary>
     public void MoveRight()
     {
         if (!_mazeMap[(_currX, _currY)][1])
-            throw new InvalidOperationException("Can't go right!");
+            throw new InvalidOperationException("Can't go that way!");
         _currX++;
     }
 
-    /// <summary>Check to see if you can move up. If you can, update location; otherwise throw.</summary>
     public void MoveUp()
     {
         if (!_mazeMap[(_currX, _currY)][2])
-            throw new InvalidOperationException("Can't go up!");
+            throw new InvalidOperationException("Can't go that way!");
         _currY--;
     }
 
-    /// <summary>Check to see if you can move down. If you can, update location; otherwise throw.</summary>
     public void MoveDown()
     {
         if (!_mazeMap[(_currX, _currY)][3])
-            throw new InvalidOperationException("Can't go down!");
+            throw new InvalidOperationException("Can't go that way!");
         _currY++;
     }
 
-    public void ShowStatus()
+    public string GetStatus()
     {
-        Console.WriteLine($"Current location (x={_currX}, y={_currY})");
+        return $"Current location (x={_currX}, y={_currY})";
     }
 }

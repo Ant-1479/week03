@@ -979,11 +979,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\code.csproj",
+      "projectUniqueName": "c:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\code.csproj",
       "projectName": "code",
-      "projectPath": "C:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\code.csproj",
+      "projectPath": "c:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\code.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\obj\\",
+      "outputPath": "c:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1322,13 +1322,5 @@
         }
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\user\\Desktop\\BYU\\CSE212\\byui-cse-cse-ww-stephanie-main\\week03\\code\\obj\\project.nuget.cache : '0x00' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0."
-    }
-  ]
+  }
 }
